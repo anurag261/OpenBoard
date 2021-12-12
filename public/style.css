@@ -1,0 +1,201 @@
+/* The box-sizing property allows us to include the padding and border in an element's total width and height. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+
+.options-cont {
+    height: 3rem;
+    width: 3rem;
+    background-color: #ffffff;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* .options-cont :hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+
+/* //tool container ko change karega  */
+.tools-cont{
+    /* //jisse vo ek line mian ajaye  */
+    display: flex;
+    height: 5rem;
+    width: 55vw;
+    background-color: #f1faee;
+    justify-content: space-around;
+    position: absolute;
+    top: 2rem;
+    left: 25vw;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* tool conatainer ka ander ke cheezo ko change karega  */
+.tools-cont > * {
+    display: block;
+    height: 5rem;
+    width: 3.5rem;
+}
+
+.pencil-tool-cont {
+    height: 5rem;
+    width: 8rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    position: absolute;
+    top: 7rem;
+    left: 25vw;
+    background-color: #f1faee;
+    border-radius : 4px;
+    display: none;
+}
+
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1.2s;
+}
+
+@keyframes scale-tools {
+    0% {
+        transform: scale(.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.pencil-width-cont {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont input{
+    width: 85%;
+}
+
+.pencil-color-cont {
+    /* background-color: yellow; */
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.pencil-color {
+    height: 2rem;
+    width: 1.7rem;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: rgb(0, 0, 0);
+}
+
+.red {
+    background-color: rgb(240, 37, 37);
+}
+
+.blue {
+    background-color: rgb(27, 27, 212);
+} 
+
+.eraser-tool-cont {
+    height: 2rem;
+    width: 8rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7rem;
+    display: none;
+    left: 33vw;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: #f1faee;
+    border-radius: 3rem;
+}
+
+.eraser-tool-cont input{
+    width: 80%;
+}
+
+.sticky-cont {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 26rem;
+    left: 26rem;
+    /* background-color: aqua; */
+}
+
+.header-cont {
+    height: 2rem;
+    /* background-color: #FBF3E4; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f1faee;
+
+}
+
+.header-cont > * {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: .5rem;
+    border-radius: 50%;
+    /* background-color: brown; */
+}
+
+.minimize {
+    background-color: #77D970;
+}
+
+.removal {
+    background-color: #FF0000;
+}
+
+.note-cont {
+    height : calc(100% - 2rem);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /* background-color :rgb(27, 27, 212) */
+}
+
+::placeholder {
+    top: 1rem;
+    color: grey;
+    font-size: large;
+    
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    padding: 7px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.78);
+}
+
+img { 
+    height: 100%;
+    width: 100%;
+}
